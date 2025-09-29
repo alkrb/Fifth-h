@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الواجبات اليومية</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- خطوط Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>الواجبات اليومية</h1>
+            <p>اختر اليوم لعرض الواجبات</p>
+        </header>
+
+        <main>
+            <!-- شاشة اختيار اليوم -->
+            <div id="days-selection" class="days-selection">
+                <div class="days-grid" id="days-grid">
+                    <!-- سيتم ملء الأيام بواسطة JavaScript -->
+                </div>
+            </div>
+
+            <!-- شاشة عرض الواجبات -->
+            <div id="tasks-view" class="tasks-view hidden">
+                <div class="tasks-header">
+                    <button id="back-btn" class="back-btn">
+                        <span>← العودة</span>
+                    </button>
+                    <h2 id="selected-day-title">الواجبات ليوم الاثنين</h2>
+                </div>
+                <div class="tasks-container">
+                    <ul id="tasks-list" class="tasks-list">
+                        <!-- سيتم ملء الواجبات بواسطة JavaScript -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- مؤشر التحميل -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>جاري تحميل البيانات...</p>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
