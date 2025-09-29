@@ -200,8 +200,8 @@ header p {
 /* تحسين التصميم للجوال */
 @media (max-width: 768px) {
     .header-logo {
-        width: 100px;
-        height: 100px;
+        width: 250px;
+        height: 250px;
         margin-bottom: 15px;
     }
 }
