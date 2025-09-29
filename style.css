@@ -177,7 +177,34 @@ header p {
     animation: spin 1s ease-in-out infinite;
     margin-bottom: 15px;
 }
+/* تنسيقات الهيدر مع الصورة */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+.header-logo {
+    width: 350px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+/* تحسين التصميم للجوال */
+@media (max-width: 768px) {
+    .header-logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+}
 .loading p {
     font-size: 1.2rem;
 }
