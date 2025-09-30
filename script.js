@@ -1,6 +1,6 @@
 // إعدادات Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyCctRA8GcMlYNvk6nBE1YXeYruQwkawcHA",
+   apiKey: "AIzaSyCctRA8GcMlYNvk6nBE1YXeYruQwkawcHA",
   authDomain: "daily-tasks-a69ab.firebaseapp.com",
   databaseURL: "https://daily-tasks-a69ab-default-rtdb.firebaseio.com",
   projectId: "daily-tasks-a69ab",
