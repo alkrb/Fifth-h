@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Tajawal', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #333;
+    background: linear-gradient(135deg, #FFFFFF 0%, #D3D3D3 100%);
+    color: #000000;
     min-height: 100vh;
     direction: rtl;
 }
@@ -23,7 +23,7 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
-    color: white;
+    color: #000000;
 }
 
 header h1 {
@@ -54,7 +54,7 @@ header p {
 }
 
 .day-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: #FFFFFF;
     border-radius: 12px;
     padding: 25px 15px;
     text-align: center;
@@ -62,29 +62,30 @@ header p {
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #D3D3D3;
 }
 
 .day-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 1);
+    background: #FFFFFF;
 }
 
 .day-card h3 {
     font-size: 1.4rem;
     margin-bottom: 5px;
-    color: #4a5568;
+    color: #000000;
 }
 
 .day-card p {
     font-size: 0.9rem;
-    color: #718096;
+    color: #000000;
+    opacity: 0.8;
 }
 
 /* عرض الواجبات */
 .tasks-view {
-    background: white;
+    background: #FFFFFF;
     border-radius: 16px;
     padding: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -97,13 +98,13 @@ header p {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #D3D3D3;
     padding-bottom: 15px;
 }
 
 .back-btn {
-    background: #4a5568;
-    color: white;
+    background: #000000;
+    color: #FFFFFF;
     border: none;
     border-radius: 8px;
     padding: 10px 15px;
@@ -114,11 +115,11 @@ header p {
 }
 
 .back-btn:hover {
-    background: #2d3748;
+    background: #333333;
 }
 
 .tasks-header h2 {
-    color: #2d3748;
+    color: #000000;
     font-size: 1.8rem;
 }
 
@@ -127,13 +128,14 @@ header p {
 }
 
 .task-item {
-    background: #f7fafc;
+    background: #FFFFFF;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 15px;
-    border-right: 4px solid #667eea;
+    border-right: 4px solid #000000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: slideIn 0.5s ease;
+    border: 1px solid #D3D3D3;
 }
 
 .task-item:hover {
@@ -142,14 +144,15 @@ header p {
 }
 
 .task-item h3 {
-    color: #2d3748;
+    color: #000000;
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
 
 .task-item p {
-    color: #4a5568;
+    color: #000000;
     line-height: 1.6;
+    opacity: 0.9;
 }
 
 /* مؤشر التحميل */
@@ -165,7 +168,7 @@ header p {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    color: white;
+    color: #FFFFFF;
 }
 
 .spinner {
@@ -173,10 +176,11 @@ header p {
     height: 50px;
     border: 5px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    border-top-color: white;
+    border-top-color: #FFFFFF;
     animation: spin 1s ease-in-out infinite;
     margin-bottom: 15px;
 }
+
 /* تنسيقات الهيدر مع الصورة */
 .header-content {
     display: flex;
@@ -197,14 +201,6 @@ header p {
     transform: scale(1.05);
 }
 
-/* تحسين التصميم للجوال */
-@media (max-width: 768px) {
-    .header-logo {
-        width: 250px;
-        height: 250px;
-        margin-bottom: 15px;
-    }
-}
 .loading p {
     font-size: 1.2rem;
 }
@@ -237,6 +233,12 @@ header p {
     
     header h1 {
         font-size: 2rem;
+    }
+    
+    .header-logo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
     }
     
     .days-grid {
