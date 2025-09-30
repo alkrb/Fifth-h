@@ -1,418 +1,502 @@
 /* إعدادات عامة */
 :root {
---primary-color: #000000;        /* الأسود الأساسي */
---secondary-color: #FFFFFF;      /* الأبيض النقي */
---accent-color: #2C5AA0;         /* أزرق مميز كلمسة لونية */
---light-color: #F8F9FA;          /* أبيض دافئ */
---dark-color: #1A1A1A;           /* أسود عميق */
---success-color: #28A745;        /* أخضر ناجح */
---warning-color: #FFC107;        /* أصفر تحذيري */
---danger-color: #DC3545;         /* أحمر خطر */
---gray-light: #E9ECEF;           /* رمادي فاتح */
---gray-medium: #6C757D;          /* رمادي متوسط */
---gray-dark: #495057;            /* رمادي غامق */
---border-radius: 12px;
---box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
---transition: all 0.3s ease;
+  --primary-color: #000000;        /* الأسود الأساسي */
+  --secondary-color: #FFFFFF;      /* الأبيض النقي */
+  --accent-color: #2C5AA0;         /* أزرق مميز كلمسة لونية */
+  --light-color: #F8F9FA;          /* أبيض دافئ */
+  --dark-color: #1A1A1A;           /* أسود عميق */
+  --success-color: #28A745;        /* أخضر ناجح */
+  --warning-color: #FFC107;        /* أصفر تحذيري */
+  --danger-color: #DC3545;         /* أحمر خطر */
+  --gray-light: #E9ECEF;           /* رمادي فاتح */
+  --gray-medium: #6C757D;          /* رمادي متوسط */
+  --gray-dark: #495057;            /* رمادي غامق */
+  --border-radius: 12px;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Tajawal', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7ec 100%);
-    color: var(--dark-color);
-    min-height: 100vh;
-    direction: rtl;
-    line-height: 1.6;
+  font-family: 'Tajawal', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e7ec 100%);
+  color: var(--dark-color);
+  min-height: 100vh;
+  direction: rtl;
+  line-height: 1.6;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* رأس الصفحة */
 header {
-    margin-bottom: 40px;
-    text-align: center;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .header-logo {
-    width: 350px;
-    height: 220px;
-    object-fit: contain;
-    border-radius: 100%;
+  width: 350px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 100%;
+  transition: var(--transition);
 }
 
 .header-logo:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .header-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .header-text p {
-    font-size: 1.2rem;
-    color: var(--gray-medium);
-    font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--gray-medium);
+  font-weight: 500;
 }
 
 /* عنوان القسم */
 .section-title {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .section-title h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: var(--dark-color);
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--dark-color);
 }
 
 .section-title p {
-    color: var(--gray-medium);
-    font-size: 1.1rem;
+  color: var(--gray-medium);
+  font-size: 1.1rem;
 }
 
 /* شبكة الأيام */
 .days-selection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
 }
 
 .days-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
-    width: 100%;
-    max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
 }
 
 .day-card {
-    background: #FFFFFF;
-    border-radius: var(--border-radius);
-    padding: 25px 15px;
-    text-align: center;
-    cursor: pointer;
-    transition: var(--transition);
-    box-shadow: var(--box-shadow);
-    border: 1px solid var(--gray-light);
-    position: relative;
-    overflow: hidden;
+  background: #FFFFFF;
+  border-radius: var(--border-radius);
+  padding: 25px 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--gray-light);
+  position: relative;
+  overflow: hidden;
 }
 
 .day-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
 
 .day-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .day-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    color: var(--dark-color);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--dark-color);
 }
 
 .day-card p {
-    font-size: 0.9rem;
-    color: var(--gray-medium);
+  font-size: 0.9rem;
+  color: var(--gray-medium);
 }
 
 /* عرض الواجبات */
 .tasks-view {
-    background: #FFFFFF;
-    border-radius: var(--border-radius);
-    padding: 30px;
-    box-shadow: var(--box-shadow);
-    max-width: 900px;
-    margin: 0 auto;
-    animation: fadeIn 0.5s ease;
+  background: #FFFFFF;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: var(--box-shadow);
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease;
 }
 
 .tasks-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    border-bottom: 1px solid var(--gray-light);
-    padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--gray-light);
+  padding-bottom: 20px;
 }
 
 .back-btn {
-    background: var(--primary-color);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    cursor: pointer;
-    transition: var(--transition);
-    font-family: 'Tajawal', sans-serif;
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
+  background: var(--primary-color);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: 'Tajawal', sans-serif;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
 }
 
 .back-btn:hover {
-    background: var(--secondary-color);
-    transform: translateX(-5px);
+  background: var(--accent-color);
+  transform: translateX(-5px);
 }
 
 .day-info {
-    flex: 1;
+  flex: 1;
 }
 
 .tasks-header h2 {
-    color: var(--dark-color);
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+  color: var(--dark-color);
+  font-size: 1.8rem;
+  margin-bottom: 5px;
 }
 
 .tasks-count {
-    color: var(--gray-medium);
-    font-size: 1rem;
+  color: var(--gray-medium);
+  font-size: 1rem;
 }
 
 .tasks-list {
-    list-style: none;
+  list-style: none;
 }
 
 .task-item {
-    background: #FFFFFF;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-right: 4px solid var(--primary-color);
-    transition: var(--transition);
-    animation: slideIn 0.5s ease;
-    border: 1px solid var(--gray-light);
-    position: relative;
-    overflow: hidden;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-right: 4px solid var(--primary-color);
+  transition: var(--transition);
+  animation: slideIn 0.5s ease;
+  border: 1px solid var(--gray-light);
+  position: relative;
+  overflow: hidden;
 }
 
 .task-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 4px;
-    height: 100%;
-    background: var(--primary-color);
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-color);
 }
 
 .task-item:hover {
-    transform: translateX(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateX(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .task-item h3 {
-    color: var(--dark-color);
-    margin-bottom: 12px;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  color: var(--dark-color);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .task-item h3::before {
-    content: '•';
-    color: var(--primary-color);
-    font-size: 1.5rem;
+  content: '•';
+  color: var(--primary-color);
+  font-size: 1.5rem;
 }
 
 .task-item p {
-    color: var(--dark-color);
-    line-height: 1.7;
-    margin-bottom: 8px;
+  color: var(--dark-color);
+  line-height: 1.7;
+  margin-bottom: 8px;
 }
 
 .task-time {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--light-color);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    margin-top: 10px;
-    font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--light-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 /* حالة عدم وجود واجبات */
 .no-tasks {
-    text-align: center;
-    padding: 40px 20px;
-    color: var(--gray-medium);
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--gray-medium);
 }
 
 .no-tasks i {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: var(--gray-light);
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--gray-light);
 }
 
 .no-tasks h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 /* مؤشر التحميل */
 .loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: #FFFFFF;
 }
 
 .spinner {
-    width: 60px;
-    height: 60px;
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top-color: #FFFFFF;
-    animation: spin 1s ease-in-out infinite;
-    margin-bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #FFFFFF;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 20px;
 }
 
 .loading p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* فئات مساعدة */
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /* تأثيرات الحركة */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-    from { opacity: 0; transform: translateX(30px); }
-    to { opacity: 1; transform: translateX(0); }
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+  to { transform: rotate(360deg); }
 }
 
-/* تصميم متجاوب */
+/* تصميم متجاوب - تحسينات للهاتف */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    
-    header {
-        margin-bottom: 30px;
-    }
-    
-    .header-text h1 {
-        font-size: 2rem;
-    }
-    
-    .header-logo {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .section-title h2 {
-        font-size: 1.7rem;
-    }
-    
-    .days-grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 15px;
-    }
-    
-    .day-card {
-        padding: 20px 10px;
-    }
-    
-    .tasks-view {
-        padding: 20px;
-    }
-    
-    .tasks-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-    
-    .back-btn {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-    
-    .tasks-header h2 {
-        font-size: 1.5rem;
-    }
+  .container {
+    padding: 15px;
+  }
+  
+  header {
+    margin-bottom: 30px;
+  }
+  
+  .header-text h1 {
+    font-size: 2rem;
+  }
+  
+  .header-logo {
+    width: 280px;
+    height: 180px;
+  }
+  
+  .section-title h2 {
+    font-size: 1.7rem;
+  }
+  
+  .days-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+  
+  .day-card {
+    padding: 20px 10px;
+  }
+  
+  .day-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .tasks-view {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .tasks-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .back-btn {
+    margin-left: 0;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+  
+  .tasks-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .task-item {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .task-item h3 {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .header-text h1 {
-        font-size: 1.7rem;
-    }
-    
-    .header-text p {
-        font-size: 1rem;
-    }
-    
-    .days-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .day-card h3 {
-        font-size: 1.3rem;
-    }
-    
-    .task-item {
-        padding: 15px;
-    }
-    
-    .task-item h3 {
-        font-size: 1.2rem;
-    }
+  .header-text h1 {
+    font-size: 1.7rem;
+  }
+  
+  .header-text p {
+    font-size: 1rem;
+  }
+  
+  .header-logo {
+    width: 200px;
+    height: 140px;
+  }
+  
+  .days-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .day-card {
+    padding: 18px 8px;
+  }
+  
+  .day-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .day-card p {
+    font-size: 0.8rem;
+  }
+  
+  .tasks-view {
+    padding: 15px;
+    margin: 5px;
+  }
+  
+  .task-item {
+    padding: 12px;
+  }
+  
+  .task-item h3 {
+    font-size: 1.1rem;
+  }
+  
+  .task-time {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+}
+
+/* تحسينات إضافية للشاشات الصغيرة جداً */
+@media (max-width: 360px) {
+  .days-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-logo {
+    width: 150px;
+    height: 100px;
+  }
+  
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* تحسينات للأجهزة اللوحية */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 30px;
+  }
+  
+  .days-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 800px;
+  }
+}
+
+/* تحسينات للتوجيه الأفقي في الهواتف */
+@media (max-height: 500px) and (orientation: landscape) {
+  .days-selection {
+    min-height: 70vh;
+  }
+  
+  .header-logo {
+    width: 120px;
+    height: 80px;
+  }
+  
+  .header-text h1 {
+    font-size: 1.5rem;
+  }
 }
